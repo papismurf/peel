@@ -25,7 +25,7 @@ SECRET_KEY = '$#4t_46%z@a^pui%di9^ye+$lo@$$5pmdsfj_+-98_dbgli=ww'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'peel_dev_dump',
+        'USER': 'smurf_admin',
+        'PASSWORD': 'ith0c7omr2umi9v5',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
