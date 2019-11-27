@@ -8,6 +8,7 @@ Features
 ========
 
 - Django 2.2+
+- Frontend: React Native with iOS (Swift) and Android (Java/Kotlin)
 - Uses [Pipenv](https://github.com/kennethreitz/pipenv) - the officially recommended Python packaging tool from Python.org.
 - Development, Staging and Production settings with [django-configurations](https://django-configurations.readthedocs.org).
 - Get value insight and debug information while on Development with [django-debug-toolbar](https://django-debug-toolbar.readthedocs.org).
