@@ -44,7 +44,8 @@ INSTALLED_APPS = [
 
     # Third-party
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'debug_toolbar'
 ]
 
 REST_FRAMEWORK = {
@@ -60,10 +61,11 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # Debug Toolbar
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
 ]
 
 ROOT_URLCONF = 'backend.urls'
