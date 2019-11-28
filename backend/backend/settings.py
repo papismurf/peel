@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -79,8 +80,8 @@ DATABASES = {
         'NAME': 'peel_dev_dump',
         'USER': 'smurf_admin',
         'PASSWORD': 'ith0c7omr2umi9v5',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db-postgresql-lon1-54005-do-user-6271117-0.db.ondigitalocean.com',
+        'PORT': '25060',
     }
 }
 
