@@ -3,6 +3,9 @@ from rest_framework import serializers
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
+    '''
+    Serializes standard Django User Model
+    '''
     username = serializers.CharField()
     password = serializers.CharField(write_only=True,
                                     style={'input_type':'password'})
@@ -14,6 +17,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
         read_only_fields = ('is_staff', 'is_superuser', 'is_active')
 
     def create(self, validated_data):
+        # Create User function and validates before saving to database
         user = super(CreateUserSerializer, self).create(validated_data)
         user.set_password(validated_data['password']
         user.save()
